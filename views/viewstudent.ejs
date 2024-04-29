@@ -1,0 +1,42 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>View Student</title>
+    </head>
+
+    <body>
+
+
+
+        <table border="">
+            <tr>
+                <th>Id</th>
+                <th>Roll No</th>
+                <th>Student Name</th>
+                <th>Standard</th>
+                <th>Divison</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+
+
+            <% result.forEach(function(data) { %>
+                <tr>
+                    <td><%= data.id %></td>
+                    <td><%= data.rno %></td>
+                    <td><%= data.name %></td>
+                    <td><%= data.std %></td>
+                    <td><%= data.divi %></td>
+                    <td><a href="/updatestu/<%= data.id %> ">Update</td>
+                    <td><a href="/deletestu/<%= data.id %> ">Delete</a></td>
+                </tr>
+                <% }); %>
+
+        </table>
+
+    </body>
+
+    </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Result</title>
+</head>
+<body>
+
+    <table border="">
+        <tr>
+            <th>Id</th>
+            <th>Std</th>
+            <th>Div</th>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Sub 1</th>
+            <th>Sub 2</th>
+            <th>Sub 3</th>
+            <th>Sub 4</th>
+            <th>Total</th>
+            <th>Per</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+
+
+        <% result.forEach(function(data) { %>
+            <tr>
+                <td><%= data.id %></td>
+                <td><%= data.std %></td>
+                <td><%= data.divi %></td>
+                <td><%= data.rno %></td>
+                <td><%= data.name %></td>
+                <td><%= data.s1 %></td>
+                <td><%= data.s2 %></td>
+                <td><%= data.s3 %></td>
+                <td><%= data.s4 %></td>
+                <td><%= data.total %></td>
+                <td><%= data.per %></td>
+                <td><a href="/updateres/<%= data.id %> ">Update</a></td>
+                <td><a href="/deleteres/<%= data.id %> ">Delete</a></td>
+            </tr>
+            <% }); %>
+
+    </table>
+
+    
+</body>
+</html>
